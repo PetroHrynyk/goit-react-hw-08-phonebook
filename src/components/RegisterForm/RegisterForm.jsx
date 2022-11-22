@@ -6,6 +6,7 @@ import { selectRegisterError } from 'redux/auth/selectors';
 import { updateErrorRegister } from 'redux/auth/authSlice';
 import { useEffect } from 'react';
 import Button from '@mui/material/Button';
+import { TextField } from 'formik-material-ui';
 
 
 import Box from '@mui/material/Box';
@@ -53,7 +54,7 @@ export const RegisterForm = () => {
       >
         <FormRegisterEl>
           <RegisterLabel>Username</RegisterLabel>
-          <InputRegisterEl type="text" name="name" placeholder="Enter name" />
+          <InputRegisterEl component={TextField} type="text" name="name" placeholder="Enter name" />
           
           <InputError name="name" component="div" />
 
@@ -61,6 +62,7 @@ export const RegisterForm = () => {
 
           <RegisterLabel>Email</RegisterLabel>
           <InputRegisterEl
+          component={TextField}
             type="email"
             name="email"
             placeholder="Enter email"
@@ -70,6 +72,7 @@ export const RegisterForm = () => {
 
           <RegisterLabel>Password</RegisterLabel>
           <InputRegisterEl
+            component={TextField}
             type="password"
             name="password"
             placeholder="Enter password"

@@ -12,7 +12,7 @@ export const InputRegisterEl = styled(Field)`
   font-size: 16px;
   width: 300px;
   height: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   padding: 5px;
   border-radius: 5px;
   outline-color: #5edcb0;

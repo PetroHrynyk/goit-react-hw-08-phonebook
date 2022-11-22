@@ -13,13 +13,14 @@ export const ContactListEl = styled.ul`
 
 export const ContactListItem = styled.li`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
-  height: 100px;
+  gap: 10px;
+  // flex-direction: column;
+  justify-content: space-between;
+  // align-items: center;
+  width: 420px;
+  // height: 90px;
   border: 1px solid #39bb96;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
   border-radius: 5px;
 
@@ -29,16 +30,17 @@ export const ContactListItem = styled.li`
 `;
 
 export const ContactItemHeader = styled.h2`
-  margin: 0;
+  // margin: 0;
   margin-bottom: auto;
 `;
 
 export const ContactItemText = styled.p`
-  margin: 0;
-  font-weight: 600;
-  color: #0b5e18;
+  // margin: 0;
+  // font-weight: 600;
+  // color: #0b5e18;
   color: white;
-  margin-bottom:8px
+  font-size: 20px;
+  // margin-bottom:8px
 `;
 
 export const ContactItemButton = styled.button`

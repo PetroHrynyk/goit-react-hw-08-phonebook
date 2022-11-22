@@ -7,7 +7,7 @@ export default function Home() {
     <HomeInfo>
       <Greeting>Welcome to Phonebook App!</Greeting>
       {isLoggedIn ? (
-        <GreetingInfo>Watch your contacts` info </GreetingInfo>
+        <GreetingInfo>Organize your contact`s info </GreetingInfo>
       ) : (
         <GreetingInfo>Please, log in or register :)</GreetingInfo>
       )}

@@ -13,6 +13,7 @@ import { Filter } from 'components/Filter/Filter';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Container } from 'pages/Contacts/Contacts.styled';
 import { Spinner } from 'components/Spinner/Spinner';
+import { Typography } from '@mui/material';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -26,11 +27,12 @@ export default function Contacts() {
 
   return (
     <Container>
-      <h1 >Phonebook</h1>
+      {/* <h1 >Phonebook</h1> */}
+      <Typography variant="h4" component="h1" sx={{m:2}}>Phonebook</Typography>
       <ContactForm />
       {items.length > 0 && (
         <>
-          <h2>Contacts</h2>
+          {/* <h2>Contacts</h2> */}
           <Filter />
         </>
       )}

@@ -1,18 +1,20 @@
 import styled from '@emotion/styled';
 import { Form, Field, ErrorMessage } from 'formik';
 
+
 export const FormEl = styled(Form)`
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 20px
 `;
 
 export const InputEl = styled(Field)`
-  font-size: 16px;
+  // font-size: 50px;
   width: 300px;
-  height: 30px;
-  margin-bottom: 15px;
-  padding: 5px;
+  // height: 30px;
+  // margin: 10px;
+  // padding: 50px;
   border-radius: 5px;
   // outline-color: #5edcb0;
   border-color: #64b5f6;
@@ -46,3 +48,4 @@ export const Error = styled(ErrorMessage)`
   font-weight: 500;
   font-size: 16px;
 `;
+

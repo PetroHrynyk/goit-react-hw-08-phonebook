@@ -1,5 +1,5 @@
 
-import { TextField } from '@mui/material';
+import { TextField, Typography } from '@mui/material';
 import {
   FilterWrapper,
 
@@ -19,7 +19,8 @@ export const Filter = () => {
 
   return (
     <FilterWrapper>
-      <FilterLabel htmlFor="text">Find contacts by name</FilterLabel>
+      {/* <FilterLabel htmlFor="text">Search contacts by name</FilterLabel> */}
+      <Typography variant="h6" component="h3" sx={{margin: 1}}> Search contacts by name</Typography>
       {/* <FilterInput
         type="text"
         name="filter"

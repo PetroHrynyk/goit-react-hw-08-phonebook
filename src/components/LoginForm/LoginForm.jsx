@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import { selectLogInError } from 'redux/auth/selectors';
 import { updateErrorLogIn } from 'redux/auth/authSlice';
+import { TextField } from 'formik-material-ui';
 
 import {
   FormLogInEl,
@@ -47,11 +48,12 @@ export const LoginForm = () => {
       >
         <FormLogInEl>
           <LogInLabel>Email</LogInLabel>
-          <InputLogInEl type="email" name="email" placeholder="Enter email" />
+          <InputLogInEl component={TextField} type="email" name="email" placeholder="Enter email" />
           <InputError name="email" component="div" />
 
           <LogInLabel>Password</LogInLabel>
           <InputLogInEl
+          component={TextField}
             type="password"
             name="password"
             placeholder="Enter password"
@@ -64,8 +66,7 @@ export const LoginForm = () => {
       </Formik>
       {error && (
         <Error>
-          Are you registered? If yes, check the data you entered, if no,
-          register
+          Are you shure you have an account? Check the data you entered, or don't be shy - register
         </Error>
       )}
     </>

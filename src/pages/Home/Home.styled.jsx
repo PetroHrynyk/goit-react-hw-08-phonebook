@@ -12,6 +12,7 @@ export const Greeting = styled.h1`
   font-weight: 700;
   color: #0d47a1;
   margin-top: 100px;
+  margin-bottom: 40px;
 `;
 
 export const GreetingInfo = styled.h2`

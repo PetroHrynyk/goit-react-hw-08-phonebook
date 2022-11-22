@@ -1,17 +1,18 @@
 import { Formik } from 'formik';
 import * as yup from 'yup';
 // import { nanoid } from 'nanoid';
+import { TextField } from 'formik-material-ui';
 import {
   FormEl,
   InputEl,
-  Label,
-   Error,
+  // Label,
+  //  Error,
 } from 'components/ContactForm/ContactForm.styled';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { selectAllContacts } from 'redux/contacts/selectors';
-import { Button } from '@mui/material';
+import {  Button } from '@mui/material';
 
 const schema = yup.object().shape({
   name: yup
@@ -42,9 +43,9 @@ export const ContactForm = () => {
   const items = useSelector(selectAllContacts);
 
   const handleSubmit = (values, { resetForm }) => {
-    const dublicateContact = findDuplicateContact(values, items);
+    const duplicateContact = findDuplicateContact(values, items);
 
-    if (dublicateContact) {
+    if (duplicateContact) {
       alert(`${values.name} is already in contacts`);
     } else {
       dispatch(addContact(values));
@@ -65,13 +66,17 @@ export const ContactForm = () => {
       onSubmit={handleSubmit}
     >
       <FormEl autoComplete="off">
-        <Label htmlFor="name">Name</Label>
-        <InputEl type="text" name="name" placeholder="Enter name" />
-               <Error name="name" component="div" />
-        <Label htmlFor="number">Number</Label>
-        <InputEl type="tel" name="number" placeholder="Enter phone number" />
-                <Error name="number" component="div" />
-       
+      
+        {/* <Label htmlFor="name">Name</Label> */}
+        
+        <InputEl component={TextField}    type="text" label='Name' name="name" placeholder="Enter name" /> 
+               {/* <Error name="name" component="div" /> */}
+        {/* <Label htmlFor="number">Number</Label> */}
+        <InputEl component={TextField} type="tel" label="Number" name="number" placeholder="Enter phone number" />
+                {/* <Error name="number" component="div" /> */}
+   
+     
+
       <Button type="submit" variant='contained'>Add contact</Button>
       </FormEl>
     </Formik>

@@ -11,7 +11,7 @@ import {
   InputLogInEl,
   // LogInLabel,
    Error,
-  InputError,
+  // InputError,
 } from 'components/LoginForm/LoginForm.styled';
 import { useEffect } from 'react';
 import { Button, Paper, Typography } from '@mui/material';
@@ -50,8 +50,8 @@ export const LoginForm = () => {
           <Paper elevation={5} sx={{p:3, display:'flex', alignItems: "center", flexDirection:"column"}}>
           {/* <LogInLabel>Email</LogInLabel> */}
           <Typography variant='h5' color={'#0d47a1'}>e-mail</Typography>
-          <InputLogInEl component={TextField} type="email" name="email" placeholder="Enter email" />
-          <InputError name="email" component="div" />
+          <InputLogInEl component={TextField} type="email" name="email" placeholder="Enter email" label="e-mail"/>
+          {/* <InputError name="email" component="div" /> */}
 
           {/* <LogInLabel>Password</LogInLabel> */}
           <Typography variant='h5' color={'#0d47a1'}>password</Typography>
@@ -60,8 +60,9 @@ export const LoginForm = () => {
             type="password"
             name="password"
             placeholder="Enter password"
+            label="password"
           />
-          <InputError name="password" component="div" />
+          {/* <InputError name="password" label="password" component="div" /> */}
 
           {/* <SubmitLogInButton type="submit">Log In</SubmitLogInButton> */}
           <Button variant='contained' type="submit">Log In</Button>

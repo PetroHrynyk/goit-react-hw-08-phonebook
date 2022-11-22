@@ -59,7 +59,7 @@ export const RegisterForm = () => {
         <FormRegisterEl><Paper elevation={5} sx={{p:3, display:'flex', alignItems: "center", flexDirection:"column"}}>
           {/* <RegisterLabel>Username</RegisterLabel> */}
           <Typography variant='h5' color={'#0d47a1'}>Username</Typography>
-          <InputRegisterEl component={TextField} type="text" name="name" placeholder="Enter name" />
+          <InputRegisterEl component={TextField} type="text" name="name" placeholder="Enter name" label="Name" />
           
           {/* <InputError name="name" component="div" /> */}
 
@@ -72,6 +72,7 @@ export const RegisterForm = () => {
             type="email"
             name="email"
             placeholder="Enter email"
+            label="E-mail"
           />
            
           {/* <InputError name="email" component="div" /> */}
@@ -83,7 +84,8 @@ export const RegisterForm = () => {
             type="password"
             name="password"
             placeholder="Enter password"
-          />
+            label="Password"
+                     />
           
 
           {/* <InputError name="password" component="div" /> */}

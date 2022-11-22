@@ -7,7 +7,7 @@ export const ContactListEl = styled.ul`
   justify-content: center;
   list-style: none;
   flex-wrap: wrap;
-  gap: 10px;
+   gap: 10px;
   padding: 0;
 `;
 

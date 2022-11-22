@@ -7,14 +7,15 @@ export const Nav = styled.nav`
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   font-size: 26px;
-  font-weight: 700;
+  // font-weight: 700;
   color: white;
   margin-left: 20px;
   margin-right: 20px;
 
   &.active {
     color: #0d47a1;
-    font-size: 28px
+    font-size: 30px;
+    font-weight: 700;  
   }
 
   :hover:not(.active),

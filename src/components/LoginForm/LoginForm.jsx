@@ -9,12 +9,12 @@ import { TextField } from 'formik-material-ui';
 import {
   FormLogInEl,
   InputLogInEl,
-  LogInLabel,
+  // LogInLabel,
    Error,
   InputError,
 } from 'components/LoginForm/LoginForm.styled';
 import { useEffect } from 'react';
-import { Button } from '@mui/material';
+import { Button, Paper, Typography } from '@mui/material';
 
 const schema = yup.object().shape({
   email: yup.string().email('Not a proper email'),
@@ -47,11 +47,14 @@ export const LoginForm = () => {
         validationSchema={schema}
       >
         <FormLogInEl>
-          <LogInLabel>Email</LogInLabel>
+          <Paper elevation={5} sx={{p:3, display:'flex', alignItems: "center", flexDirection:"column"}}>
+          {/* <LogInLabel>Email</LogInLabel> */}
+          <Typography variant='h5' color={'#0d47a1'}>e-mail</Typography>
           <InputLogInEl component={TextField} type="email" name="email" placeholder="Enter email" />
           <InputError name="email" component="div" />
 
-          <LogInLabel>Password</LogInLabel>
+          {/* <LogInLabel>Password</LogInLabel> */}
+          <Typography variant='h5' color={'#0d47a1'}>password</Typography>
           <InputLogInEl
           component={TextField}
             type="password"
@@ -62,6 +65,7 @@ export const LoginForm = () => {
 
           {/* <SubmitLogInButton type="submit">Log In</SubmitLogInButton> */}
           <Button variant='contained' type="submit">Log In</Button>
+          </Paper>
         </FormLogInEl>
       </Formik>
       {error && (

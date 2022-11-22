@@ -3,8 +3,7 @@ import { TextField, Typography } from '@mui/material';
 import {
   FilterWrapper,
 
-  FilterLabel,
-} from 'components/Filter/Filter.styled';
+  } from 'components/Filter/Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateFilter } from 'redux/contacts/contactsSlice';
 import { selectFilter } from 'redux/contacts/selectors';

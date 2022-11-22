@@ -7,7 +7,7 @@ import {
   RegisterLoginInfo,
   UserName,
 } from 'components/UserMenu/UserMenu.styled';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -15,8 +15,8 @@ export const UserMenu = () => {
 
   return (
     <RegisterLoginInfo>
-      <LoginGreeting>
-        Welcome, &nbsp; <UserName>{user.name}</UserName>
+      <LoginGreeting><Typography variant='p' >Welcome,</Typography>
+        &nbsp; <UserName>{user.name}</UserName>
       </LoginGreeting>
       {/* <LogButton type="button" onClick={() => dispatch(logOut())}>
         Logout

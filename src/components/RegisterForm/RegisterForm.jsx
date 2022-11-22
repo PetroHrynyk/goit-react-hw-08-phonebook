@@ -8,16 +8,20 @@ import { useEffect } from 'react';
 import Button from '@mui/material/Button';
 import { TextField } from 'formik-material-ui';
 
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
 
 import Box from '@mui/material/Box';
 
 import {
   FormRegisterEl,
   InputRegisterEl,
-  RegisterLabel,
+  // RegisterLabel,
   Error,
-  InputError,
+  // InputError,
 } from 'components/RegisterForm/RegisterForm.styled';
+import { Paper, Typography } from '@mui/material';
 
 const schema = yup.object().shape({
   name: yup.string().required(),
@@ -52,15 +56,17 @@ export const RegisterForm = () => {
         onSubmit={handleSubmit}
         validationSchema={schema}
       >
-        <FormRegisterEl>
-          <RegisterLabel>Username</RegisterLabel>
+        <FormRegisterEl><Paper elevation={5} sx={{p:3, display:'flex', alignItems: "center", flexDirection:"column"}}>
+          {/* <RegisterLabel>Username</RegisterLabel> */}
+          <Typography variant='h5' color={'#0d47a1'}>Username</Typography>
           <InputRegisterEl component={TextField} type="text" name="name" placeholder="Enter name" />
           
-          <InputError name="name" component="div" />
+          {/* <InputError name="name" component="div" /> */}
 
 
 
-          <RegisterLabel>Email</RegisterLabel>
+          {/* <RegisterLabel>Email</RegisterLabel> */}
+          <Typography variant='h5' color={'#0d47a1'}>Email</Typography>
           <InputRegisterEl
           component={TextField}
             type="email"
@@ -68,9 +74,10 @@ export const RegisterForm = () => {
             placeholder="Enter email"
           />
            
-          <InputError name="email" component="div" />
+          {/* <InputError name="email" component="div" /> */}
 
-          <RegisterLabel>Password</RegisterLabel>
+          {/* <RegisterLabel>Password</RegisterLabel> */}
+          <Typography variant='h5' color={'#0d47a1'}>Password</Typography>
           <InputRegisterEl
             component={TextField}
             type="password"
@@ -79,17 +86,20 @@ export const RegisterForm = () => {
           />
           
 
-          <InputError name="password" component="div" />
+          {/* <InputError name="password" component="div" /> */}
 
           {/* <SubmitRegisterButton type="submit">Register</SubmitRegisterButton> */}
           <Button variant="contained" type="submit">Register</Button>
+          </Paper>
         </FormRegisterEl>
       </Formik>
-      {error && (
-        <Error>
-          Your data isn`t valid. Please, check correctness and try again
-        </Error>
-      )}
+      
+
+       <Error>
+         Your data isn`t valid. Please, check correctness and try again 
+        </Error>  
+       
+    
     </Box>
   );
 };

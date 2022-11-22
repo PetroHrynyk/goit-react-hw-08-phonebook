@@ -46,7 +46,7 @@ export const ContactForm = () => {
     const duplicateContact = findDuplicateContact(values, items);
 
     if (duplicateContact) {
-      alert(`${values.name} is already in contacts`);
+      alert(`${values.name} This contact  already exist`);
     } else {
       dispatch(addContact(values));
 

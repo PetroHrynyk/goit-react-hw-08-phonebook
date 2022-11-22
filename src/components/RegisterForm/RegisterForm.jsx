@@ -94,11 +94,11 @@ export const RegisterForm = () => {
         </FormRegisterEl>
       </Formik>
       
-
-       <Error>
-         Your data isn`t valid. Please, check correctness and try again 
-        </Error>  
-       
+        {error && (
+        <Error>
+         Oops, something went wrong. Try again
+        </Error>
+      )}
     
     </Box>
   );
